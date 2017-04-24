@@ -1,4 +1,4 @@
-# React-JS-Movies  ![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/app_icon_big.png)
+# React-JS-Movies  ![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/src/assets/img/app_icon.png)
 React JS App for Movies and TV series
 
 This projects support a series of articles about how to setup an ReactJS environment to develop an scalable, maintainable and testable projects.
