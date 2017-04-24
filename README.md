@@ -17,7 +17,7 @@ This projects support a series of articles about how to setup an ReactJS environ
 
 - Text and Input
 
--Property and States 
+- Property and States 
 
 ### Screenshots
 
