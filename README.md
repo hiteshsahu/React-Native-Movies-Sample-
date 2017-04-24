@@ -5,11 +5,19 @@ This projects support a series of articles about how to setup an ReactJS environ
 
 ### A useful stack on React Native 
 
-- Architecture
+- App Design
 
-- User interface
+- Designing React JS Components
 
-- Compatibility
+- Using DrawerLayoutAndroid
+
+- Using and Styling ToolBar with Actions
+
+- Using Custom List and Grid View
+
+- Text and Input
+
+-Property and States 
 
 ### Screenshots
 
