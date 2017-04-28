@@ -1,27 +1,28 @@
-# React-JS-Movies  ![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/src/assets/img/app_icon.png)
-React JS App for Movies and TV series
+# React-JS-Movies Sample ![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/src/assets/img/app_icon.png)
 
-This projects support a series of articles about how to setup an ReactJS environment to develop an scalable, maintainable and testable projects.
+ An Movie App build with the help of React Native. This projects support a series of articles about how to setup an ReactJS environment to develop an scalable, maintainable and testable projects.
 
-### Topic covered
+### Key features of this sample
 
-- App Design
+- Project Architecture
 
-- Designing React JS Components
+- Breaking down Ui in scenes and React JS Components
 
-- Using DrawerLayoutAndroid
+- Splash Screen with React Native
 
-- Using and Styling ToolBar with toobar Actions
+- Using DrawerLayout Android for scene navigation
 
-- Using Custom List and Grid View
+- Using Android ToolBar with toobar Actions to toggle navigation drawer and pop scenes
 
-- Using Navigator to display detail of list item
+- Using Custom List Row and Grid View using flex layout.
 
-- Property and States 
+- Intercepting list item touch eent and use Navigator to display detail of list item.
 
-- Using Navigator to swich screens from Navigation drawer
+- Property and States to handle view state.
 
-- Seekbar, Dialog, Dropdown, Switch, Async Storage,
+- Creating a user preference screen using Seekbar, Dialog, Dropdown, Switch, Async Storage components.
+
+## Demo
 
 ![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/screenshots/demo.gif)
 
