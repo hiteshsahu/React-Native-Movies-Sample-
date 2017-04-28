@@ -8,6 +8,7 @@ import {
    TouchableOpacity
 } from 'react-native'
 
+import Splash from '../scene/Splash'
 import HomePage from '../scene/HomePage'
 import AboutPage from '../scene/AboutPage'
 import MovieDetail from '../scene/MovieDetail'
@@ -19,7 +20,7 @@ export default class Router extends Component {
    render() {
       return (
          <Navigator
-            initialRoute = {{ name: 'Home', title: 'Home' }}
+            initialRoute = {{ name: 'Splash', title: 'Splash' }}
             renderScene = { this.renderScene }
             // navigationBar = {
             //    <Navigator.NavigationBar
@@ -42,6 +43,15 @@ export default class Router extends Component {
       if(route.name == 'About') {
          return (
             <AboutPage
+               navigator = {navigator}
+             {...route.passProps}
+            />
+         )
+      }
+
+      if(route.name == 'Splash') {
+         return (
+            <Splash
                navigator = {navigator}
              {...route.passProps}
             />

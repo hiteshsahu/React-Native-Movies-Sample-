@@ -154,6 +154,26 @@ plot: {
   marginTop: 40,                      // Margin at the top
   padding: 10,                        // Padding for content inside
 },
+splashBackground: {
+ flex: 1,
+ width:width,
+ height:height,                      // Take up all screen space
+ padding: 20,
+ justifyContent: 'center',           // Center vertically
+ alignItems: 'center',                       // Add padding for content inside
+},
+// Shared text style
+splashText: {
+  color: '#fff',                      // White text color
+  backgroundColor: 'transparent',     // No background
+  fontFamily: 'Avenir',               // Change default font
+  fontWeight: 'bold',                 // Bold font
+  // Add text shadow
+  textShadowColor: '#222',
+  textShadowOffset: { width: 1, height: 1 },
+  textShadowRadius: 4,
+    fontSize: 35,
+},
 });
 
 export default Style;

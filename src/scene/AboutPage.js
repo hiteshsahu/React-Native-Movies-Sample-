@@ -13,7 +13,7 @@ import {
   ToolbarAndroid,
   Navigator,
   TouchableOpacity,
-  View,
+  View,Linking ,
   Slider,
   ScrollView
 } from 'react-native';
@@ -169,6 +169,12 @@ export default class AboutPage extends Component {
                 Level is   {this.state.value }
                 </Text>
                 <View style={Style.divider}/>
+
+
+                <Text style={Style.settings_value}
+                onPress={() => Linking.openURL('http://hiteshsahu.com')}>
+                © 2017 Hitesh Sahu- All Rights Reserved
+               </Text>
 
     </ScrollView>
     </View>
