@@ -3,7 +3,7 @@ React JS App for Movies and TV series
 
 This projects support a series of articles about how to setup an ReactJS environment to develop an scalable, maintainable and testable projects.
 
-### A useful stack on React Native 
+### Topic covered
 
 - App Design
 
@@ -11,13 +11,17 @@ This projects support a series of articles about how to setup an ReactJS environ
 
 - Using DrawerLayoutAndroid
 
-- Using and Styling ToolBar with Actions
+- Using and Styling ToolBar with toobar Actions
 
 - Using Custom List and Grid View
 
-- Text and Input
+- Using Navigator to display detail of list item
 
 - Property and States 
+
+- Using Navigator to swich screens from Navigation drawer
+
+- Seekbar, Dialog, Dropdown, Switch, Async Storage,
 
 ### Screenshots
 
