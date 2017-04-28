@@ -15,6 +15,8 @@
 - Using Android ToolBar with toobar Actions to toggle navigation drawer and pop scenes
 
 - Using Custom List Row and Grid View using flex layout.
+ 
+- Pull to Refresh to refresh list data.
 
 - Intercepting list item touch eent and use Navigator to display detail of list item.
 
