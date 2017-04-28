@@ -26,14 +26,7 @@ This projects support a series of articles about how to setup an ReactJS environ
 ![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/screenshots/demo.gif)
 
 ### Screenshots
-
-![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/screenshots/home.png)
-
-![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/screenshots/detail.png)
-
-![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/screenshots/settings.png)
-
-![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/screenshots/drawer.png)
+![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/screenshots/home.png) ![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/screenshots/detail.png) ![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/screenshots/settings.png) ![](https://github.com/hiteshsahu/React-JS-Movies/blob/master/screenshots/drawer.png)
 
 ### License
 
