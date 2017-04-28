@@ -7,6 +7,7 @@
 
 import { StyleSheet ,Dimensions} from 'react-native';
 const { width, height } = Dimensions.get('window');
+const gutter = 3; // You can add gutter if you want
 
 var Style = StyleSheet.create({
   container: {
@@ -91,6 +92,67 @@ var Style = StyleSheet.create({
   slider: {
   width: width,
   margin: 10,
+},
+// Main container
+containerDetail: {
+ flex: 1,                            // Take up all screen space
+ backgroundColor: '#333',            // Dark background
+},
+// Background image
+imageBackground: {
+ flex: 1,
+ width:width,
+ height:height,                      // Take up all screen space
+ padding: 20                         // Add padding for content inside
+},
+
+ title: {
+   color: '#5cc8ff',
+   fontWeight: 'bold',
+   fontFamily: 'Roboto-Bold',
+   fontSize: 25,
+ },
+ year: {
+   color: '#d63c6b',
+   fontFamily: 'Roboto-Medium',
+   fontSize: 20,
+ },
+ content: {
+   color: '#FFF',
+   fontFamily: 'Roboto-Medium',
+   fontSize: 17,
+ },
+
+item: {
+    borderRadius: 4,
+    borderWidth: 0.5,
+    borderColor: '#d6d7da',
+    backgroundColor: '#757575',
+    width: (width - gutter * 3)/(2),
+    marginBottom: gutter,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+  },
+ buttonContainer: {
+  marginTop: 20,                      // Add some margin at the top
+},
+buttonClose: {
+  backgroundColor: '#617D8A',         // Color the button
+  padding: 15                         // Padding inside
+},
+buttonText: {
+  color: '#fff',                      // White button text
+  fontFamily: 'Avenir',               // Change default font
+  fontWeight: 'bold',                 // Bold font
+  textAlign: 'center',                // Center horizontally
+},
+plot: {
+  backgroundColor: 'rgba(0,0,0,0.5)', // Semi-transparent white background
+  borderRadius: 10,                   // Rounder corners
+  marginTop: 40,                      // Margin at the top
+  padding: 10,                        // Padding for content inside
 },
 });
 

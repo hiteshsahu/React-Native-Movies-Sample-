@@ -184,5 +184,4 @@ export default class AboutPage extends Component {
   };
 }
 
-
 AppRegistry.registerComponent('HomePage', () => AboutPage);

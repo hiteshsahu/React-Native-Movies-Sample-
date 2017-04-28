@@ -2,17 +2,15 @@ import Style from '../Style';
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
   Text,TextInput,Image,
-  Navigator,Dimensions,
+  Navigator,
   DrawerLayoutAndroid,
   ToolbarAndroid,ScrollView,
   TouchableOpacity,
   View
 } from 'react-native';
 
-const { width, height } = Dimensions.get('window');
-const gutter = 3; // You can add gutter if you want
+
 
 export default class MovieDetail extends Component {
 
@@ -104,23 +102,23 @@ export default class MovieDetail extends Component {
             ]}
             />
 
-      <View style={styles.container}>
+      <View style={Style.containerDetail}>
        {/* Background image with large image */}
-       <Image source={{uri: cover}} style={styles.imageBackground}>
+       <Image source={{uri: cover}} style={Style.imageBackground}>
          {/* Use ScrollView in case plot is too large to fit on the screen */}
          <ScrollView
-           style={styles.plot}
+           style={Style.plot}
          >
 
             <Text style={Style.welcome}>
              Movie Detail
            </Text>
-            <Text  style={styles.title} >{title}{"\n"}</Text>
-            <Text  style={styles.year}>Year - {year}</Text>
-            <Text  style={styles.content}>{synopsis}</Text>
+            <Text  style={Style.title} >{title}{"\n"}</Text>
+            <Text  style={Style.year}>Year - {year}</Text>
+            <Text  style={Style.content}>{synopsis}</Text>
      </ScrollView>
             {/* Button container */}
-         <View style={styles.buttonContainer}>
+         <View style={Style.buttonContainer}>
            {/* Press handler */}
            <TouchableOpacity
              // Go to the previous screen
@@ -128,9 +126,9 @@ export default class MovieDetail extends Component {
              // Dim button a little bit when pressed
              activeOpacity={0.7}
              // Pass button style
-             style={styles.button}
+             style={Style.buttonClose}
            >
-             <Text style={styles.buttonText}>CLOSE</Text>
+             <Text style={Style.buttonText}>CLOSE</Text>
            </TouchableOpacity>
          </View>
        </Image>
@@ -146,75 +144,3 @@ export default class MovieDetail extends Component {
 }
 
 AppRegistry.registerComponent('MovieDetail', () => MovieDetail);
-
-const styles = StyleSheet.create({
-
-  // Main container
- container: {
-   flex: 1,                            // Take up all screen space
-   backgroundColor: '#333',            // Dark background
- },
- // Background image
- imageBackground: {
-   flex: 1,
-   width:width,
-   height:height,                      // Take up all screen space
-   padding: 20                         // Add padding for content inside
- },
-  title: {
-    color: '#5cc8ff',
-    fontWeight: 'bold',
-    fontFamily: 'Roboto-Bold',
-    fontSize: 25,
-  },
-  year: {
-    color: '#d63c6b',
-    fontFamily: 'Roboto-Medium',
-    fontSize: 20,
-  },
-  content: {
-    color: '#FFF',
-    fontFamily: 'Roboto-Medium',
-    fontSize: 17,
-  },
- thumb:
- {
- width: (width - gutter * 3)/(2),
-  height: 300,
-  left: 0,
-  right: 0,
-  top:0
-},
- item: {
-     borderRadius: 4,
-     borderWidth: 0.5,
-     borderColor: '#d6d7da',
-     backgroundColor: '#757575',
-     width: (width - gutter * 3)/(2),
-     marginBottom: gutter,
-     flexDirection: 'column',
-     justifyContent: 'center',
-     alignItems: 'center',
-     alignSelf: 'flex-start',
-   },
-   buttonContainer: {
-    marginTop: 20,                      // Add some margin at the top
-  },
-  button: {
-    backgroundColor: '#617D8A',         // Color the button
-    padding: 15                         // Padding inside
-  },
-  buttonText: {
-    color: '#fff',                      // White button text
-    fontFamily: 'Avenir',               // Change default font
-    fontWeight: 'bold',                 // Bold font
-    textAlign: 'center',                // Center horizontally
-  },
-  plot: {
-    backgroundColor: 'rgba(0,0,0,0.5)', // Semi-transparent white background
-    borderRadius: 10,                   // Rounder corners
-    marginTop: 40,                      // Margin at the top
-    padding: 10,                        // Padding for content inside
-  },
-
-});
