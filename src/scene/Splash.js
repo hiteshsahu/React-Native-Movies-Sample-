@@ -24,7 +24,7 @@ constructor(props) {
 
   componentDidMount() {
      console.log('Component DID MOUNT!')
-     setTimeout(this.goToHome, 2000);
+     setTimeout(this.goToHome, 500);
   }
 
   render() {

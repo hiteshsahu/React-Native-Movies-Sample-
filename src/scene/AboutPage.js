@@ -46,7 +46,8 @@ export default class AboutPage extends Component {
    super(props);
    this.state = { text: 'Search Movies' };
     this.openDrawer = this.openDrawer.bind(this);
-     this.goToHome = this.goToHome.bind(this);
+    this.goToHome = this.goToHome.bind(this);
+    this.goToProfile = this.goToProfile.bind(this);
  }
 
    openDrawer() {
@@ -64,6 +65,13 @@ export default class AboutPage extends Component {
      });
   }
 
+  goToProfile() {
+         this.props.navigator.push({
+         name: 'Profile',
+         title: 'Profile',
+   });
+ }
+
   render() {
 
       var navigationView = (
@@ -79,7 +87,17 @@ export default class AboutPage extends Component {
            </TouchableOpacity>
 
            <Text  style = {Style.button} >About</Text>
+
+           <TouchableOpacity
+           onPress = {this.goToProfile}>
+           <Text style =  {Style.button}>
+           Profile
+            </Text >
+        </TouchableOpacity>
+        
          </View>
+
+
        );
 
     return (
@@ -190,4 +208,4 @@ export default class AboutPage extends Component {
   };
 }
 
-AppRegistry.registerComponent('HomePage', () => AboutPage);
+AppRegistry.registerComponent('AboutPage', () => AboutPage);

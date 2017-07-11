@@ -27,6 +27,7 @@ export default class HomePage extends Component {
  };
    this.openDrawer = this.openDrawer.bind(this);
    this.goToAbout = this.goToAbout.bind(this);
+   this.goToProfile = this.goToProfile.bind(this);
  }
 
  openDrawer() {
@@ -41,6 +42,13 @@ export default class HomePage extends Component {
         name: 'About',
         title: 'About',
      });
+   }
+
+    goToProfile() {
+           this.props.navigator.push({
+           name: 'Profile',
+           title: 'Profile',
+     });
   }
 
   render() {
@@ -53,10 +61,13 @@ export default class HomePage extends Component {
 
        <TouchableOpacity
        onPress = {this.goToAbout}>
-       <Text style =  {Style.button}>
-          About
-       </Text >
+       <Text style =  {Style.button}>About </Text >
     </TouchableOpacity>
+
+    <TouchableOpacity
+    onPress = {this.goToProfile}>
+    <Text style =  {Style.button}>Profile </Text >
+ </TouchableOpacity>
 
      </View>
    );

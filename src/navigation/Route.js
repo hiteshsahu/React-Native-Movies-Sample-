@@ -12,6 +12,8 @@ import Splash from '../scene/Splash'
 import HomePage from '../scene/HomePage'
 import AboutPage from '../scene/AboutPage'
 import MovieDetail from '../scene/MovieDetail'
+import DevProfile from '../scene/Profile'
+
 
 export default class Router extends Component {
    constructor(){
@@ -43,6 +45,15 @@ export default class Router extends Component {
       if(route.name == 'About') {
          return (
             <AboutPage
+               navigator = {navigator}
+             {...route.passProps}
+            />
+         )
+      }
+
+      if(route.name == 'Profile') {
+         return (
+            <DevProfile
                navigator = {navigator}
              {...route.passProps}
             />

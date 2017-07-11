@@ -2,15 +2,13 @@ import Style from '../Style';
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  Text,TextInput,Image,
-  Navigator,
-  DrawerLayoutAndroid,
+  Text,TextInput,Image,Alert,ToastAndroid,
+  Navigator,Modal,
+  DrawerLayoutAndroid,TouchableHighlight,
   ToolbarAndroid,ScrollView,
   TouchableOpacity,
   View
 } from 'react-native';
-
-
 
 export default class MovieDetail extends Component {
 
@@ -26,12 +24,26 @@ export default class MovieDetail extends Component {
    this.openDrawer = this.openDrawer.bind(this);
    this.goToAbout = this.goToAbout.bind(this);
    this.goToHome = this.goToHome.bind(this);
-  this.goBack = this.goBack.bind(this);
+   this.goBack = this.goBack.bind(this);
+   this.showConfirmationDialog = this.showConfirmationDialog.bind(this);
  }
 
  openDrawer() {
     this.drawer.openDrawer();
 }
+
+showConfirmationDialog(){
+  Alert.alert(
+'Confirm Ticket',
+'Would you like to buy ticket for this movie',
+[
+  {text: 'Yes', onPress: () => {ToastAndroid.showWithGravity('Ticket Booked :D',ToastAndroid.SHORT, ToastAndroid.CENTER);}},
+  {text: 'No', onPress: () => {ToastAndroid.show('Ticket cancel :(', ToastAndroid.SHORT);},},
+  {text: 'Cancel', onPress: () =>console.log('Cancelled'), style: 'cancel'},
+],
+{ cancelable: false }
+)
+   }
 
   onActionSelected(position) {
   }
@@ -55,10 +67,8 @@ export default class MovieDetail extends Component {
         this.props.navigator.pop();
       }
 
-
   render({ movie } = this.props) {
-
- const { title,cover, year, synopsis } = movie;
+  const { title,cover, year, synopsis } = movie;
 
   var navigationView = (
      <View style={{flex: 1, backgroundColor: '#292f36'}}>
@@ -81,6 +91,7 @@ export default class MovieDetail extends Component {
    );
 
     return (
+
   <DrawerLayoutAndroid
         drawerWidth={300}
         ref={(_drawer) => this.drawer = _drawer}
@@ -88,7 +99,7 @@ export default class MovieDetail extends Component {
         renderNavigationView={() => navigationView}>
 
         <View style={Style.container}>
-        <ScrollView>
+
 
           <ToolbarAndroid
             style={Style.toolbar}
@@ -101,7 +112,7 @@ export default class MovieDetail extends Component {
               {title: "Log out",  show: "always", iconName: 'person', iconColor:'#fff',iconSize:24 , titleColor:"#FFF"}
             ]}
             />
-
+  <ScrollView>
       <View style={Style.containerDetail}>
        {/* Background image with large image */}
        <Image source={{uri: cover}} style={Style.imageBackground}>
@@ -116,21 +127,24 @@ export default class MovieDetail extends Component {
             <Text  style={Style.title} >{title}{"\n"}</Text>
             <Text  style={Style.year}>Year - {year}</Text>
             <Text  style={Style.content}>{synopsis}</Text>
-     </ScrollView>
+
             {/* Button container */}
          <View style={Style.buttonContainer}>
            {/* Press handler */}
            <TouchableOpacity
-             // Go to the previous screen
-             onPress={() => {this.props.navigator.pop();}}
+             // Buy Ticket
+             onPress= { this.showConfirmationDialog}
              // Dim button a little bit when pressed
              activeOpacity={0.7}
              // Pass button style
              style={Style.buttonClose}
            >
-             <Text style={Style.buttonText}>CLOSE</Text>
+             <Text style={Style.buttonText}>Buy Ticket</Text>
            </TouchableOpacity>
          </View>
+
+     </ScrollView>
+
        </Image>
      </View>
 
